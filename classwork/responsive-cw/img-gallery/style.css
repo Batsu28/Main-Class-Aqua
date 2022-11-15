@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+}
+body {
+  margin: 0;
+}
+.container {
+  max-width: 1280px;
+  min-width: 480px;
+  width: 100%;
+  margin: auto;
+}
+header {
+  height: 50vh;
+  background: url(https://picsum.photos/800/400);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  display: flex;
+}
+div h2 {
+  padding: 20px;
+}
+.image-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gal-pic {
+  max-width: 300px;
+  min-width: 150px;
+  width: 100%;
+  padding: 20px;
+}

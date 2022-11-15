@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+}
+body {
+  margin: 0;
+}
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+}
+header {
+  height: 50vh;
+  background: url(https://picsum.photos/800/400);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  display: flex;
+}
+.image-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gal-pic {
+  width: 300px;
+  padding: 20px;
+}
+@media screen and (max-width: 480px) {
+  .gal-pic {
+    width: 480px;
+  }
+  .gal-pic img {
+    width: 100%;
+  }
+}
