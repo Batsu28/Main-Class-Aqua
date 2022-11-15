@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(59, 181, 181);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul {
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+li {
+  list-style: none;
+}
+@media screen and (max-width: 750px) {
+  header {
+    text-align: center;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  body {
+    background-color: rgba(101, 170, 195, 0.761);
+  }
+  nav {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    background: url(../Hamburger_icon.svg.png);
+    background-size: cover;
+  }
+  nav:hover {
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    overflow: visible;
+    background-color: rgba(17, 18, 18, 0.69);
+    background-image: none;
+  }
+  ul {
+    opacity: 0;
+  }
+  ul:hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 250px;
+    opacity: 1;
+    gap: 0;
+    cursor: pointer;
+  }
+  li {
+    color: white;
+  }
+}
