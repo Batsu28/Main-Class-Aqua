@@ -15,7 +15,7 @@ body {
 header {
   height: 50vh;
   background: url(https://picsum.photos/800/400);
-  background-size: cover;
+  background-size: 100vw 50vh;
   background-repeat: no-repeat;
   color: white;
   text-align: center;
@@ -27,12 +27,18 @@ header {
   justify-content: center;
 }
 .gal-pic {
-  width: 300px;
+  max-width: 400px;
+  min-width: 200px;
+  width: 100%;
+  margin: auto;
   padding: 20px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .gal-pic {
-    width: 480px;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
   }
   .gal-pic img {
     width: 100%;
