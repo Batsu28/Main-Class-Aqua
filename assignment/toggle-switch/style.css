@@ -1,0 +1,45 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+}
+input {
+  opacity: 0;
+}
+.circle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 50px;
+}
+.circle:before {
+  position: absolute;
+  content: "";
+  height: 42px;
+  width: 42px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+input:checked + .circle {
+  background-color: #2196f3;
+  transition: all 1s;
+}
+input:checked + .circle:before {
+  left: 54px;
+  transition: all 1s;
+}
