@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  margin: auto;
+  width: 900px;
+  height: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.inner-box {
+  width: 20%;
+  height: 20%;
+  background-color: aqua;
+  transition: all 0.2s 0s;
+}
+.inner-box:hover {
+  background-color: brown;
+}
