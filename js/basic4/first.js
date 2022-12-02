@@ -53,3 +53,18 @@ console.log(output);
 */
 
 //
+
+let num = 10;
+let space = " ",
+  count = 0;
+output = "";
+
+while (count < num) {
+  while (count++ == (count % 2 == 0)) {
+    let space1 = Number(space);
+    space1++;
+    output = space1 + count + " ";
+    console.log(output);
+  }
+  count++;
+}
