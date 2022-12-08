@@ -1,0 +1,33 @@
+    data type
+primitive type:
+
+    key: value,
+ ex: let persen = {
+    firstname: "1",
+    lastname: "2",
+    age: 36,
+    nothing: [1, 1.5, 4, 2],
+    };
+    print: { firstname: '1', lastname: '2', age: 36, nothing: [ 1, 1.5, 4, 2 ] }
+
+
+ - object function orohod method bolno
+ - object dotor object hiihiig "nested object" gene
+ - object duudah console.log(persen.firstname);
+                 console.log(persen.func());
+                 console.log(persen["firstname"]);
+ - this.key "this" gedeg n tuhain objectiin ilerhiilne arrow function bolohgui
+ - spread oparetar p1 = {}
+                   p2 = {...p1}
+ - ... copy  ex let p1 = [10, 20, 30];
+                let p2 = [...p1];
+
+                p2[0] = 100;
+
+                person2 = { ...person1 }
+
+    bodlogo:
+atl [] hiine dotor n 4uus ih {} oruulna
+object dotor name age record [] hiine
+function zohiono getAverageSpeed getAverageAge
+ - nested loop
