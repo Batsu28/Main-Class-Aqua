@@ -1,2 +1,29 @@
-
-
+body {
+  margin: 0;
+}
+.top {
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.bottom {
+  width: 100vw;
+  height: 600px;
+}
+div {
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.66);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+#box1,
+#box2,
+#box3,
+#box4 {
+  position: relative;
+}

@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="dcterms.created" content="Fri, 27 Jun 2014 21:02:23 GMT" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title></title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div>
-      <input type="text" id="input1">
-      <button id="btn">1</button>
-      <input type="text" id="input1">
+    <div class="top">
+      <div id="box1" draggable="true" ondragstart="drag_start(event)"></div>
+      <div id="box2" draggable="true" ondragstart="drag_start(event)"></div>
+      <div id="box3" draggable="true" ondragstart="drag_start(event)"></div>
+      <div id="box4" draggable="true" ondragstart="drag_start(event)"></div>
     </div>
-    <div id="output" ></div>
+    <div
+      class="bottom"
+      ondragover="drag_over(event)"
+      ondrop="drop(event)"
+    ></div>
     <script src="./test1.js"></script>
   </body>
 </html>
