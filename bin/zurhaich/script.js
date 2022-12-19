@@ -1,38 +1,46 @@
-//
+
 let question1 = document.getElementById("question1");
-// let question2 = document.getElementById("question2");
-// let question3 = document.getElementById("question3");
+let question2 = document.getElementById("question2");
+let question3 = document.getElementById("question3");
 
-// let answer1 = document.getElementById("answer1");
-// let answer2 = document.getElementById("answer2");
-// let answer3 = document.getElementById("answer3");
+let answer1 = document.getElementById("answer1");
+let answer2 = document.getElementById("answer2");
+let answer3 = document.getElementById("answer3");
 
-// let output = document.getElementById("output");
+let output = document.getElementById("output");
 
-// let answerArr1 = ["өндөр", "намхан", "сахалтай"];
+let startBtn = document.querySelector("button")
 
-// function randomNum(min, max) {
-//   return Math.floor(Math.random() * max + min);
-// }
+let gameBg = document.querySelector("#opacityBg")
 
-// let text1 = `Танай ангийн хамгийн ${
-//   answerArr1[randomNum(0, answerArr1.length)]
-// } нь хэн бэ?`;
+let questArr1 = ["өндөр", "намхан", "сахалтай"];
+let questArr2 = []
 
-// question1.innerText = `${text1}`;
+function randomNum(min, max) {
+  return Math.floor(Math.random() * max + min);
+}
 
-// question2.innerText = "Таны очих дуртай газар хаана вэ?";
+startBtn.addEventListener("click",gameStart)
 
-// question3.innerText = "Таны хэдэн сард төрсөн бэ?";
+function gameStart(){
+console.log("test")
 
-// function input1(a) {
-//   a.addEventListener("input", () => {
-//     return a.value;
-//   });
-// }
+gameBg.style.display = "flex"
+
+let text1 = `Танай ангийн хамгийн ${
+    questArr1[randomNum(0, questArr1.length)]
+} нь хэн бэ?`;
+
+question1.innerText = `${text1}`;
+
+question2.innerText = "Таны очих дуртай газар хаана вэ?";
+
+question3.innerText = "Таны хэдэн сард төрсөн бэ?";
+
 
 // output.innerText = `Ирэх ${randomNum(2023, 20)} онд ${input1(
 //   answer1
 // )} тай хамт ${answer2.value} явах магадлалтай "\n" ${
 //   answer3.value
 // } сард төрсөн бол шингэн зүйл их хэрэглэх нигууртай`;
+}

@@ -2,23 +2,19 @@
   box-sizing: border-box;
 }
 body {
-  height: 100vh;
   margin: 0;
-  background: radial-gradient(white, black);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: radial-gradient(rgb(218, 204, 22), rgb(167, 31, 144),rgb(218, 204, 22), rgb(167, 31, 144), rgb(167, 31, 144));
 }
 
 .main {
-  position: relative;
   margin: 50px;
+  position: relative;
   width: 100vw;
   height: 100vh;
 }
 
 .card {
-  width: 150px;
+  width: 140px;
   height: 200px;
   background: url(./426d23474113cd5cde2f2c64920d9bcc_327c975639cbb75ebdb722933d406ce6.webp);
   background-size: cover;
@@ -29,49 +25,49 @@ body {
 
 .card:nth-child(1) {
   position: absolute;
-  top: calc(5% + 100px);
-  left: 50%;
+  top: 0%;
+  left: calc(50% - 70px);
 }
 .card:nth-child(2) {
   position: absolute;
-  top: calc(20% + 100px);
-  left: 15%;
+  top: 12%;
+  left: 20%;
 }
 .card:nth-child(3) {
   position: absolute;
-  top: calc(50% + 100px);
+  top: calc(50% - 100px);
   left: 0;
 }
 .card:nth-child(4) {
   position: absolute;
-  top: calc(80% + 100px);
-  left: 15%;
+  bottom: 12%;
+  left: 20%;
 }
 .card:nth-child(5) {
   position: absolute;
-  top: calc(95% + 100px);
-  left: 50%;
+  bottom: 0%;
+  right: calc(50% - 70px);
 }
 .card:nth-child(6) {
   position: absolute;
-  top: calc(80% + 100px);
-  left: 85%;
+  bottom: 12%;
+  right: 20%;
 }
 .card:nth-child(7) {
   position: absolute;
-  top: calc(50% + 100px);
-  left: 100%;
+  top: calc(50% - 100px);
+  right: 0%;
 }
 .card:nth-child(8) {
   position: absolute;
-  top: calc(20% + 100px);
-  left: 85%;
+  top: 12%;
+  right: 20%;
 }
 
 .magicBall {
   position: absolute;
-  top: calc(50% - 10px);
-  left: calc(50% - 100px);
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
   margin: auto;
   width: 300px;
   height: 300px;
@@ -94,10 +90,47 @@ body {
   border: none;
   font-size: 50px;
   color: blue;
+  cursor: pointer;
 }
 
 #output {
   padding: 5px;
   background-color: #fff;
   display: none;
+}
+
+#opacityBg{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:calc(100% + 100px);
+  height: calc(100% + 100px);
+  background:url(./Magic_Circle.png), rgba(0, 0, 0, 0.5);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+}
+.quest{
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  
+}
+.quest .labelBox{
+  width: 100%;
+  height: 60%;
+  background-color: aqua;
+}
+.quest input{
+  width: 100%;
+  height: 40%;
+  background-color: black;
+  border: none;
+  color: white;
+}
+.quest input:checked{
+  border: none;
 }
