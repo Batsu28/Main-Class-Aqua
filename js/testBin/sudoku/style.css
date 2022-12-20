@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 470px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.new-div {
+  width: 152px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
