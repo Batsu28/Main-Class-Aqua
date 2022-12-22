@@ -186,7 +186,7 @@ body {
 
 #enter,
 #reset {
-  width: 200px;
+  width: 250px;
   height: 50px;
   background: linear-gradient(60deg, red, purple);
   cursor: pointer;

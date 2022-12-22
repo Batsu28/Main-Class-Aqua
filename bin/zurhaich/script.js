@@ -15,6 +15,14 @@ let answer3 = document.getElementById("answer3");
 let gameBg = document.querySelector("#opacityBg");
 let output = document.getElementById("output");
 
+let box1 = document.getElementsByClassName("quest")[0];
+let box2 = document.getElementsByClassName("quest")[1];
+let box3 = document.getElementsByClassName("quest")[2];
+
+box2.style.display = "none";
+box3.style.display = "none";
+btnEnter.style.display = "none";
+
 //// arrays
 
 let questArr1 = [
@@ -63,17 +71,44 @@ function randomNum(min, max) {
 
 // input
 
-function input(a) {
-  return a.value;
+function input1() {
+  answer1.addEventListener("keypress", (e) => {
+    if (e.key == "Enter") {
+      box1.style.display = "none";
+      box2.style.display = "block";
+    }
+  });
+  return answer1.value;
+}
+function input2() {
+  answer2.addEventListener("keypress", (e) => {
+    if (e.key == "Enter") {
+      box2.style.display = "none";
+      box3.style.display = "block";
+    }
+  });
+  return answer2.value;
+}
+function input3() {
+  let check = num[parseInt(answer3.value) - 1];
+  if (parseInt(answer3.value) === check) {
+    answer3.addEventListener("keypress", (e) => {
+      if (e.key == "Enter") {
+        box3.style.display = "none";
+        btnEnter.style.display = "flex";
+      }
+    });
+  }
+  return answer3.value;
 }
 
 // zuvlumj
 
 function zurhaiRandom() {
   if (randomNum(0, 10) % 2 == 0) {
-    return zurhai[parseInt(input(answer3)) - 1][1];
+    return zurhai[parseInt(input3()) - 1][1];
   } else {
-    return zurhai[parseInt(input(answer3)) - 1][0];
+    return zurhai[parseInt(input3()) - 1][0];
   }
 }
 
@@ -96,26 +131,20 @@ function gameStart() {
 
 //// events
 
-answer1.addEventListener("input", input);
-answer2.addEventListener("input", input);
-answer3.addEventListener("input", input);
+answer1.addEventListener("input", input1);
+answer2.addEventListener("input", input2);
+answer3.addEventListener("input", input3);
 
 btnEnter.addEventListener("click", () => {
-  let check = num[parseInt(input(answer3)) - 1];
-  if (parseInt(input(answer3)) === check) {
-    document.querySelector(".top").style.display = "none";
-    btnEnter.style.display = "none";
-    btnReset.style.display = "flex";
-    output.style.display = "block";
+  document.querySelector(".top").style.display = "none";
+  btnEnter.style.display = "none";
+  btnReset.style.display = "flex";
+  output.style.display = "block";
 
-    output.innerHTML = `Ирэх ${randomNum(2023, 2026)} онд ${input(
-      answer1
-    )} тай хамт ${input(answer2)} явах магадлалтай <br>Зөвлөмж: ${input(
-      answer3
-    )} сард төрсөн хүмүүс ${zurhaiRandom()} `;
-  } else {
-    btnEnter.Disabled = true;
-  }
+  output.innerHTML = `Ирэх ${randomNum(
+    2023,
+    2026
+  )} онд ${input1()} тай хамт ${input2()} явах магадлалтай <br>Зөвлөмж: ${input3()} сард төрсөн хүмүүс ${zurhaiRandom()} `;
 });
 
 btnStart.addEventListener("click", gameStart);
