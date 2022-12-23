@@ -29,6 +29,9 @@ body {
 .countries {
   /* margin-bottom: 8rem; */
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   font-size: 2rem;
 }
 
@@ -56,13 +59,14 @@ body {
 }
 
 .neighbour {
+  padding: 10px;
   transform: scale(0.8) translateY(1rem);
   margin-left: 0;
 }
 
 .country__img {
-  width: 30rem;
-  height: 17rem;
+  width: 100%;
+  height: 18rem;
   object-fit: cover;
   background-color: #eee;
   border-top-left-radius: 0.7rem;
