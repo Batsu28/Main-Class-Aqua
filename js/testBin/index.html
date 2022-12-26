@@ -9,17 +9,18 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="top">
-      <div id="box1" draggable="true" ondragstart="drag_start(event)"></div>
-      <div id="box2" draggable="true" ondragstart="drag_start(event)"></div>
-      <div id="box3" draggable="true" ondragstart="drag_start(event)"></div>
-      <div id="box4" draggable="true" ondragstart="drag_start(event)"></div>
+    <div class="container">
+      <div class="top">
+        <div class="shapebox">
+          <div class="box" id="box1" draggable="true"></div>
+        </div>
+
+        <div class="box" id="box2" draggable="true"></div>
+        <div class="box" id="box3" draggable="true"></div>
+        <div class="box" id="box4" draggable="true"></div>
+      </div>
+      <div class="bottom"></div>
     </div>
-    <div
-      class="bottom"
-      ondragover="drag_over(event)"
-      ondrop="drop(event)"
-    ></div>
     <script src="./test1.js"></script>
   </body>
 </html>

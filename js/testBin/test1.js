@@ -1,3 +1,11 @@
+document.querySelector("#box1").addEventListener("dragstart", drag_start);
+document.querySelector("#box2").addEventListener("dragstart", drag_start);
+document.querySelector("#box3").addEventListener("dragstart", drag_start);
+document.querySelector("#box4").addEventListener("dragstart", drag_start);
+
+document.querySelector(".bottom").addEventListener("dragover", drag_over);
+document.querySelector(".bottom").addEventListener("drop", drop);
+
 function drag_start(event) {
   let style = window.getComputedStyle(event.target, null);
   let str =
@@ -7,19 +15,17 @@ function drag_start(event) {
     (parseInt(style.getPropertyValue("top")) - event.clientY) +
     "," +
     event.target.id;
-  event.dataTransfer.setData("Text", str);
+  event.dataTransfer.setData("box", str);
 }
 
 function drop(event) {
-  let offset = event.dataTransfer.getData("Text").split(",");
-  let dm = document.getElementById(offset[2]);
-  dm.style.left = event.clientX + parseInt(offset[0], 10) + "px";
-  dm.style.top = event.clientY + parseInt(offset[1], 10) + "px";
+  let getValue = event.dataTransfer.getData("box").split(",");
+  let dm = document.getElementById(getValue[2]);
+  dm.style.left = event.clientX + parseInt(getValue[0], 10) + "px";
+  dm.style.top = event.clientY + parseInt(getValue[1], 10) + "px";
   event.preventDefault();
-  return false;
 }
 
 function drag_over(event) {
   event.preventDefault();
-  return false;
 }
