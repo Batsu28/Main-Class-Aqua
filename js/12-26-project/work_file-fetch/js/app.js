@@ -2,6 +2,8 @@ let breeds = document.querySelector("#breeds");
 let card = document.querySelector(".card");
 let str = "";
 
+breeds.innerHTML = `<option value="blank" hidden></option>`;
+
 fetch(`https://dog.ceo/api/breeds/list/all`)
   .then((data) => data.json())
   .then((data) => {
@@ -13,6 +15,7 @@ function getImg(type) {
     .then((data) => data.json())
     .then((data) => (card.innerHTML = `<img src="${data.message}">`));
 }
+
 function breedsOptions(breed) {
   let breedOpt = Object.keys(breed.message);
 
@@ -24,4 +27,6 @@ function breedsOptions(breed) {
 breeds.addEventListener("change", () => {
   getImg(breeds.value);
 });
-card.addEventListener("click", getImg);
+card.addEventListener("click", () => {
+  getImg(breeds.value);
+});

@@ -7,23 +7,25 @@ function randomNum(min, max) {
 function ranCells() {}
 
 for (let i = 0; i < 9; i++) {
-  let newDiv = document.createElement("div");
-  newDiv.className = "new-div";
-  mainBox.appendChild(newDiv);
   for (let j = 0; j < 9; j++) {
     let cell = document.createElement("div");
     cell.className = "cell";
-    newDiv.appendChild(cell);
-    if (j == 8) {
-      let cellName = document.querySelectorAll(".cell");
-      let count = 0;
-      do {
-        cellName[randomNum(count, (count + 1) * 9)].innerText = `${randomNum(
-          1,
-          10
-        )}`;
-        count++;
-      } while (count < 9);
-    }
+    mainBox.appendChild(cell);
+    validation(i, j);
+    debugger;
+  }
+}
+
+function validation(a, b) {
+  if (a == 8 && b == 8) {
+    let cellName = document.querySelectorAll(".cell");
+    let count = 0;
+    do {
+      cellName[randomNum(count, (count + 1) * 9)].innerText = `${randomNum(
+        1,
+        10
+      )}`;
+      count++;
+    } while (count < 9);
   }
 }
