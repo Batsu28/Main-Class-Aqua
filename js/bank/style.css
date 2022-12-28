@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+.row {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cell {
+  width: 200px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.num_cell {
+  width: 50px;
+}
