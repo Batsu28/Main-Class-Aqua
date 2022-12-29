@@ -95,11 +95,13 @@ function balanceType() {
 }
 
 dltBtn.addEventListener("click", () => {
+  let del_Id = document.querySelector("#del_Id");
+  const delById = {
+    id: del_Id,
+  };
   fetch("http://localhost:3333/api/users", {
     method: "DELETE",
-    body: JSON.stringify({
-      id: "10",
-    }),
+    body: JSON.stringify(delById),
   })
     .then((res) => res.json())
     .then(() => console.log("deleted"))
