@@ -1,6 +1,6 @@
 const express = require("express");
-const cors = require('cors');
-const bodyParser = require("body-parser")
+const cors = require("cors");
+const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
 let users = [
   {
@@ -83,7 +83,6 @@ let users = [
     balance: 1900000,
     balance_type: false,
   },
-
 ];
 let index = users.length;
 
